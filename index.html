@@ -15,19 +15,10 @@
     header img { max-width: 300px; }
     main { padding: 20px; max-width: 600px; margin: auto; }
     form { display: flex; flex-direction: column; gap: 15px; }
-    input, button, select { padding: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 5px; }
+    input, button { padding: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 5px; }
     button { background: #ffdc00; cursor: pointer; border: none; font-weight: bold; }
     .faq, .reviews { margin-top: 40px; }
     h2 { color: #222; }
-    .telegram-button {
-      display: inline-block;
-      margin-top: 20px;
-      background-color: #0088cc;
-      color: white;
-      padding: 12px 18px;
-      border-radius: 8px;
-      text-decoration: none;
-    }
   </style>
 </head>
 <body>
@@ -38,7 +29,7 @@
   </header>
 
   <main>
-    <p>Заполни анкету ниже — и мы свяжемся с тобой!</p>
+    <p>Заполни анкету ниже — и мы свяжемся с тобой в WhatsApp!</p>
 
     <form id="courierForm">
       <input type="text" id="name" placeholder="Имя" required />
@@ -46,8 +37,6 @@
       <input type="text" id="city" placeholder="Город" required />
       <button type="submit">Отправить заявку</button>
     </form>
-
-    <a href="https://t.me/rabota_mhk_bot" class="telegram-button" target="_blank">Перейти в Telegram</a>
 
     <div class="faq">
       <h2>Часто задаваемые вопросы</h2>
@@ -66,24 +55,16 @@
   <script>
     document.getElementById('courierForm').addEventListener('submit', function(e) {
       e.preventDefault();
-      const name = document.getElementById('name').value;
-      const phone = document.getElementById('phone').value;
-      const city = document.getElementById('city').value;
 
-      const message = `📩 Новая заявка:\n👤 Имя: ${name}\n📞 Телефон: ${phone}\n🏙️ Город: ${city}`;
-      const token = '7697611849:AAE3QspEs-N2vR4-ZeWRhvIzzJ0ZPlOCpnM';
-      const chat_id = '@Moonshine8877';
-      const url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${encodeURIComponent(message)}`;
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const city = document.getElementById('city').value.trim();
 
-      fetch(url)
-        .then(res => {
-          if (res.ok) {
-            alert('Заявка отправлена!');
-            document.getElementById('courierForm').reset();
-          } else {
-            alert('Ошибка при отправке. Попробуйте позже.');
-          }
-        });
+      const message = `Имя: ${name}\nТелефон: ${phone}\nГород: ${city}`;
+      const whatsappURL = `https://wa.me/79096877727?text=${encodeURIComponent(message)}`;
+
+      window.open(whatsappURL, '_blank');
+      document.getElementById('courierForm').reset();
     });
   </script>
 
