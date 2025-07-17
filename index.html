@@ -1,32 +1,98 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <title>Работа курьером</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Работа курьером Яндекс.Еда – Подай заявку</title>
   <style>
-    body { font-family: Arial; background: #f5f5f5; padding: 20px; }
-    .container { max-width: 400px; margin: auto; background: white; padding: 20px; border-radius: 10px; }
-    input, button { width: 100%; margin: 10px 0; padding: 10px; font-size: 16px; }
-    a { color: green; text-decoration: none; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      color: #333;
+      text-align: center;
+    }
+    header {
+      background-color: #ffe600;
+      padding: 20px;
+    }
+    h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+    p {
+      font-size: 18px;
+      margin: 10px 0 20px;
+    }
+    img {
+      max-width: 300px;
+      margin-top: 20px;
+    }
+    .container {
+      padding: 20px;
+    }
+    form {
+      background: #fff;
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 400px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    input[type="text"], input[type="number"] {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 12px 20px;
+      background-color: #ffcf00;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background-color: #ffc000;
+    }
+    .cta-link {
+      display: inline-block;
+      margin-top: 25px;
+      font-size: 18px;
+      color: #fff;
+      background-color: #000;
+      padding: 12px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+    .cta-link:hover {
+      background-color: #333;
+    }
   </style>
 </head>
 <body>
+  <header>
+    <h1>Работа в Яндекс.Еда</h1>
+    <p>Стань курьером — свободный график, быстрые выплаты!</p>
+  </header>
+
   <div class="container">
-    <h2>Работа курьером</h2>
-    <form id="form">
-      <input type="text" name="name" placeholder="Имя" required>
-      <input type="text" name="city" placeholder="Город" required>
-      <input type="tel" name="phone" placeholder="Телефон" required>
-      <button type="submit">Откликнуться</button>
+    <img src="https://cdn-icons-png.flaticon.com/512/1046/1046784.png" alt="Курьер Яндекс Еда" />
+
+    <form>
+      <h2>Оставь заявку</h2>
+      <input type="text" placeholder="Имя" required />
+      <input type="number" placeholder="Возраст" required />
+      <button class="btn" type="submit">Отправить</button>
     </form>
-    <p><a href="https://wa.me/79096877727" target="_blank">Написать в WhatsApp</a></p>
+
+    <a class="cta-link" href="https://my.saleads.pro/s/zw0v6?erid=2VtzqxQRR4q" target="_blank">
+      Перейти к вакансии
+    </a>
   </div>
-  <script>
-    document.getElementById('form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      window.location.href = "https://my.saleads.pro/s/zw0v6?erid=2VtzqxQRR4q";
-    });
-  </script>
 </body>
 </html>
