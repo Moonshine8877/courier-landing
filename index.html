@@ -4,95 +4,79 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Работа курьером Яндекс.Еда – Подай заявку</title>
+  <!-- OpenGraph для соцсетей -->
+  <meta property="og:title" content="Работа курьером Яндекс.Еда – Свободный график, быстрые выплаты" />
+  <meta property="og:description" content="Подай заявку на работу курьером — оформление за 1 день, выплаты каждую неделю!" />
+  <meta property="og:image" content="https://moonshine8877.github.io/courier-landing/courier.jpg" />
+  <meta property="og:url" content="https://moonshine8877.github.io/courier-landing/" />
+  <meta name="twitter:card" content="summary_large_image" />
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f9f9f9;
-      color: #333;
-      text-align: center;
-    }
-    header {
-      background-color: #ffe600;
-      padding: 20px;
-    }
-    h1 {
-      margin: 0;
-      font-size: 28px;
-    }
-    p {
-      font-size: 18px;
-      margin: 10px 0 20px;
-    }
-    img {
-      max-width: 300px;
-      margin-top: 20px;
-    }
-    .container {
-      padding: 20px;
-    }
-    form {
-      background: #fff;
-      padding: 20px;
-      margin: 20px auto;
-      max-width: 400px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    input[type="text"], input[type="number"] {
-      width: 90%;
-      padding: 10px;
-      margin: 10px 0;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-    .btn {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 12px 20px;
-      background-color: #ffcf00;
-      border: none;
-      border-radius: 5px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-    .btn:hover {
-      background-color: #ffc000;
-    }
-    .cta-link {
-      display: inline-block;
-      margin-top: 25px;
-      font-size: 18px;
-      color: #fff;
-      background-color: #000;
-      padding: 12px 20px;
-      border-radius: 5px;
-      text-decoration: none;
-    }
-    .cta-link:hover {
-      background-color: #333;
-    }
+    /* Стили упрощены */
+    body{margin:0;font-family:Arial,sans-serif;background:#f9f9f9;color:#333;text-align:center;}
+    header{background:#ffe600;padding:20px;}
+    h1{margin:0;font-size:28px;}
+    p{font-size:18px;margin:10px 0 20px;}
+    img{max-width:100%;height:auto;border-radius:8px;}
+    .container{padding:20px;}
+    form{background:#fff;padding:20px;margin:20px auto;max-width:400px;border-radius:8px;box-shadow:0 0 10px rgba(0,0,0,0.1);}
+    input{width:90%;padding:10px;margin:10px 0;border:1px solid #ccc;border-radius:4px;}
+    .btn{padding:12px 20px;background:#ffcf00;border:none;border-radius:5px;font-size:16px;cursor:pointer;}
+    .btn:hover{background:#ffc000;}
+    .cta{display:inline-block;margin:15px;padding:12px 20px;font-size:16px;color:#fff;background:#000;border-radius:5px;text-decoration:none;}
+    .cta:hover{background:#333;}
+    .faq, .reviews{max-width:600px;margin:40px auto;text-align:left;}
+    .faq h3, .reviews h3{font-size:22px;border-bottom:2px solid #ffe600;padding-bottom:5px;}
+    .faq dt{font-weight:bold;margin-top:15px;}
+    .reviews p{background:#fff;padding:10px;border-radius:4px;box-shadow:0 0 5px rgba(0,0,0,0.1);}
+    .review-author{font-size:14px;color:#666;text-align:right;}
   </style>
 </head>
 <body>
+
   <header>
     <h1>Работа в Яндекс.Еда</h1>
-    <p>Стань курьером — свободный график, быстрые выплаты!</p>
+    <p>Курьером — свободный график, оформление за 1 день!</p>
   </header>
 
   <div class="container">
-    <img src="https://cdn-icons-png.flaticon.com/512/1046/1046784.png" alt="Курьер Яндекс Еда" />
+    <img src="courier.jpg" alt="Реальный курьер на скутере" />
 
-    <form>
-      <h2>Оставь заявку</h2>
-      <input type="text" placeholder="Имя" required />
-      <input type="number" placeholder="Возраст" required />
+    <form id="leadForm">
+      <h2>Оставьте заявку</h2>
+      <input type="text" name="name" placeholder="Имя" required />
+      <input type="number" name="age" placeholder="Возраст" required />
       <button class="btn" type="submit">Отправить</button>
     </form>
 
-    <a class="cta-link" href="https://my.saleads.pro/s/zw0v6?erid=2VtzqxQRR4q" target="_blank">
-      Перейти к вакансии
-    </a>
+    <a class="cta" href="https://t.me/YOUR_BOT_USERNAME" target="_blank">Открыть в Telegram</a>
+    <a class="cta" href="https://my.saleads.pro/s/zw0v6?erid=2VtzqxQRR4q" target="_blank">Перейти к вакансии</a>
   </div>
+
+  <div class="faq">
+    <h3>❓ Частые вопросы</h3>
+    <dl>
+      <dt>Когда выплаты?</dt>
+      <dd>Каждую неделю, на карту или наличными по договорённости.</dd>
+      <dt>Нужен опыт?</dt>
+      <dd>Нет, обучаем на месте, главное — ответственность и желание.</dd>
+      <dt>Какой график?</dt>
+      <dd>График свободный — работаешь, когда удобно.</dd>
+    </dl>
+  </div>
+
+  <div class="reviews">
+    <h3>💬 Отзывы курьеров</h3>
+    <p>"Подал заявку утром, начал работать уже на следующий день. Платят стабильно!"<br><span class="review-author">— Тимур, 22 года</span></p>
+    <p>"Мне понравился гибкий график — можно совмещать с учёбой."<br><span class="review-author">— Анна, 19 лет</span></p>
+  </div>
+
+  <!-- Временная заглушка — отправка пока не работает -->
+  <script>
+    document.getElementById('leadForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      alert('Заявка принята! Скоро свяжемся.'); // later replace with Telegram send logic
+      this.reset();
+    });
+  </script>
 </body>
 </html>
